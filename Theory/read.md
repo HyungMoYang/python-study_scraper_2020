@@ -4,8 +4,8 @@
 
 ## 0.0 Why learn Python
 
-    - 컴퓨터 프로그래밍의 모든 부분에서 활용할 수 있는 강력하고 아름다운 언어이기 때문!
-    - 조화롭다.
+- 컴퓨터 프로그래밍의 모든 부분에서 활용할 수 있는 강력하고 아름다운 언어이기 때문!
+- 조화롭다.
 
 ## 0.1 About this course
 
@@ -21,10 +21,10 @@
 
 ## 0.4 Code Python Online
 
-    - repl.it을 통한 python code를 online으로 작업
+- repl.it을 통한 python code를 online으로 작업
 
 # Module 1 - Theory
 
 ## 1.0 Data Types of Python
 
-    - Variable
+- Variable
