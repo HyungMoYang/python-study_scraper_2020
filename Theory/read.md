@@ -27,4 +27,40 @@
 
 ## 1.0 Data Types of Python
 
-- Variable
+- Numbers
+- String
+  - "~~~~~"
+- Boolean
+  - True / False
+- Float
+- None
+- python에서의 변수 이름 규칙 - snake case
+  - ex) super_long_variable
+
+## 1.1 Lists in Python
+
+## 1.2 Tuples and Dictionary
+
+- sequence types
+  - list
+    - [] 대괄호 사용 - ex) days = ["mon", "Tue", "Wed", "Thur", "Fri"]
+    - mutable sequence,
+  - tuple
+    - () 괄호 사용 - ex) days = ("mon", "Tue", "Wed", "Thur", "Fri")
+    - immutable sequence,
+  - dictionary
+    - {} 중괄호 사용 - ex) variable = { "key": value }
+
+## 1.3 Built in Function 내장함수
+
+- function은 기능을 반복할 수 있는 것
+- 내장함수는 python에 내장되어있는 함수
+
+## 1.4 Creating a Your First Python Function
+
+- python에서 들여쓰기의 의미
+- function 정의하기
+  ```def func_name():
+        print("hello")
+        print("bye")
+  ```
