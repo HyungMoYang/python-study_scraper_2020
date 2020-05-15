@@ -60,7 +60,9 @@
 
 - python에서 들여쓰기의 의미
 - function 정의하기
-  ```def func_name():
+
+```
+def func_name():
         print("hello")
         print("bye")
-  ```
+```
