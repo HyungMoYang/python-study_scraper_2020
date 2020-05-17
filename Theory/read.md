@@ -66,3 +66,120 @@ def func_name():
   print("hello")
   print("bye")
 ```
+
+## 1.5 Function Argument
+
+## 1.7
+
+## 1.8 Keyworded Argument
+
+- Argument
+  - default argument value
+  - positional Argument
+    - 위치에 의존적인 arguement
+  - keyword argument
+    - parameter의 이름에 의존하는 argument
+
+## 1.6 Returns
+
+- 함수의 결과 값을 반환 -> return문
+- return되는 순간 함수가 종료된다.
+
+## 1.9 Code Challenge
+
+## 1.10 Conditionals part 1
+
+- if / else
+
+## 1.11 if else and or
+
+- Boolean Operations 참 거짓 판단
+  - and, or, not
+- if / elif / else
+
+## 1.12 for Loop
+
+- 사용법
+
+```
+days = ("mon", "Tue", "Wed", "Thur", "Fri")
+for variable_name in Array_items:
+  print(variable_name)
+```
+
+## 1.13 Modules
+
+- 다른 언어의 library 같은 것
+- 사용법
+  - import (module_name)
+- 특정 module 가져오기와 이름 바꾸기
+  - from (module_name) import (module_name)
+  - from (module_name) import (module_name) as (~~)
+- 다른 파일을 작성한 후 불러오기도 가능하다. - 직접 module 만들기
+
+# Module 2 - Building a Job Scrapper
+
+## 2.0 What is WEB Scrapping
+
+- web scraping: web상의 데이터를 추출하는 것
+
+## 2.1 What are We Building
+
+- 일자리의 이름과 회사명을 가져오는 web scraper
+
+## 2.2 Navigating with Python
+
+- 1. 원하는 페이지에서 Job Scraping을 하기 위해서 url을 긁어와야한다.
+  - python 내장 모듈로 가져올 수 있지만, library를 설치하는 방향으로 진행
+  - requests2 - url의 정보
+    - .get / requests.text - html 파일
+  - beautifulsoup4
+    - data 추출 / BeautifulSoup(~~ ,"html.parser")
+
+## 2.3 Extracting Indeed Pages part 1
+
+- request2를 사용해서 url에서 html 정보를 가져오고
+- beautifulSoup4를 사용해서 필요한 데이터를 탐색하고 추출함
+- list slicing
+  - list[0:3] -> index 0 ~ 2 -> [0, 3)
+
+## 2.4 Extracting Indeed Pages part 2
+
+- soup을 이용한 가져온 정보에서 text만 추출하기
+  - .string
+
+## 2.5 Requesting Each Page
+
+- 함수를 파일화 시켜서 분할관리하기 ( 분할 정복! )
+- & 분할한 파일의 함수 호출
+- page URL에 맞는 형식으로 return 받기
+
+## 2.6 Extracting Titles
+
+- URL에서 일자리의 이름인 html 태그를 찾아들어가서 뽑아오기
+
+## 2.7 Extracting Companies
+
+- if/else를 통해서 <span> 태그 안에 <a>가 있는 경우 없는 경우를 나눠서 스크랩
+
+## 2.8 Extracting Locations and Finishing up
+
+- 일자리 세부정보 페이지까지 크롤링
+- 함수의 각각의 기능에 집중하지 말고 각 함수가 어떻게 연동해서 동작하고 어떤 태그를 통해 어떤 attribute를 추출하고 있는지에 집중할 것
+
+## 2.9 StackOverflow pages Scraping
+
+- job Scrapper 만들기 단계 다시
+
+  - 1. page 가져오기
+  - 2. request 만들기
+  - 3. job 추출하기
+
+- 두 웹사이트 모두 동작하는 pagination 함수 따로 구현 해볼 것
+
+## 2.10 StackOverflow extract jobs
+
+- get_text()
+  - strip=True 옵션
+- stackoverflow job-id 가져오기
+- \*\*\*\* soup과 request의 이해
