@@ -7,11 +7,8 @@ URL = f"https://kr.indeed.com/%EC%B7%A8%EC%97%85?q=python&limit={LIMIT}"
 
 def get_last_page():
     result = requests.get(URL)
-
     soup = BeautifulSoup(result.text, "html.parser")
-
     pagination = soup.find("div", {"class": "pagination"})
-
     links = pagination.find_all('a')
     pages = []
 
@@ -35,15 +32,15 @@ def extract_job(html):
     company = company.strip()  # 공백 지워주기
     location = html.find("div", {"class": "recJobLoc"})["data-rc-loc"]
     job_id = html["data-jk"]
-    return {"title": title,
-            "company": company,
-            "location": location,
-            "link": f"https://kr.indeed.com/viewjob?jk={job_id}&tk=1e8dtuqnr7kt4800&from=serp&vjs=3"
-            }
+    return {
+        "title": title,
+        "company": company,
+        "location": location,
+        "link": f"https://kr.indeed.com/viewjob?jk={job_id}&tk=1e8dtuqnr7kt4800&from=serp&vjs=3"
+    }
 
 
 def extract_jobs(last_page):
-
     jobs = []
     for page in range(last_page):
         print(f"Scrapping page {page}")
@@ -64,4 +61,3 @@ def get_jobs():
     jobs = extract_jobs(last_page)
 
     return jobs
-
