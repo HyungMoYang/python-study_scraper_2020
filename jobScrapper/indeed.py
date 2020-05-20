@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 LIMIT = 50
 URL = f"https://kr.indeed.com/%EC%B7%A8%EC%97%85?q=python&limit={LIMIT}"
 
+# last page를 가져오는 함수
+
 
 def get_last_page():
     result = requests.get(URL)
@@ -20,6 +22,7 @@ def get_last_page():
     return max_page
 
 
+#
 def extract_job(html):
     title = html.find("h2", {"class": "title"}).find("a")["title"]
     company = html.find("span", {"class": "company"})
@@ -29,7 +32,7 @@ def extract_job(html):
         company = str(company_anchor.string)
     else:
         company = str(company.string)
-    company = company.strip()  # 공백 지워주기
+    company = company.strip().strip("\n")  # 공백 지워주기
     location = html.find("div", {"class": "recJobLoc"})["data-rc-loc"]
     job_id = html["data-jk"]
     return {
@@ -40,6 +43,7 @@ def extract_job(html):
     }
 
 
+# page를 넘겨주고 데이터 크롤링한거 리스트에 넣는 함수
 def extract_jobs(last_page):
     jobs = []
     for page in range(last_page):
@@ -56,6 +60,7 @@ def extract_jobs(last_page):
     return jobs
 
 
+#
 def get_jobs():
     last_page = get_last_page()
     jobs = extract_jobs(last_page)
