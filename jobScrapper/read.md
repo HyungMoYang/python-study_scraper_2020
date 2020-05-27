@@ -183,3 +183,19 @@ for variable_name in Array_items:
   - strip=True 옵션
 - stackoverflow job-id 가져오기
 - \*\*\*\* soup과 request의 이해
+
+## 2.11 StackOverflow extract job
+
+- find_all( , recursive=False) 태그안에 태그를 받아오지 않게 하기위해 사용
+- unpacking value???
+- get_text(strip=True).strip("-")
+
+## 2.14 What is the CSV?
+
+- CSV란? -> Comma-Separated Values
+  - comma로 열(column)을 나누고, new line으로 행(row)를 나누는 excel의 문서형식
+- open file mode
+  - encoding = utf-8-sig -> file 저장시, 한글깨짐 현상 해결
+  - newline="" -> 파일 저장시, excel 파일에 라인 하나씩 띄우는 현상 해결
+
+## 2.15 Saving to CSV
