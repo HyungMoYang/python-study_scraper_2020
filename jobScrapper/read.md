@@ -199,3 +199,47 @@ for variable_name in Array_items:
   - newline="" -> 파일 저장시, excel 파일에 라인 하나씩 띄우는 현상 해결
 
 ## 2.15 Saving to CSV
+
+##
+
+Module #3!
+
+##
+
+# Module 4 - 2020 Python - Job scrapper with Flask
+
+## 4.0 Welcome to 2020 Update Flask!
+
+## 4.1 Introduction to Flask
+
+## 4.2 Dynamic URLs and Templates
+
+- Dynamic URLs
+  - page를 생성하고 복잡한 url연동을 flask는 decorator @app.route()로 해결한다.
+    - decorator, @ : flask는 @를 통해서 함수를 찾는다.
+  - flask의 기능을 활용해서 정적인 url을 사용하는 것이 아닌, 동적으로 변수를 사용하듯 url을 변경해서 사용할 수 있다.
+- html Templates
+  - html 템플릿을 따로 생성해서 flask의 render_template()을 사용해 웹 페이지를 추가해줄 수 있다.
+
+## 4.3 Forms and Query Arguments
+
+- html <form> tag
+  - action
+  - method
+- query Argument
+  - web에 데이터를 보내거나 요청함 / data를 넘겨주는 방식
+  - request
+  - request get
+
+## 4.4 Scrapper Integration
+
+- 사용자 예외 처리
+  - 입력받은 문자 소문자로 바꿔서 받기, word = word.lower()
+  - 아무것도 받지 않은 경우 home 화면으로 돌아가기, redirect
+- 기존의 job scrapper를 수정
+  - 사용자의 입력을 받아서 job을 찾아주는 기능으로 바꾸기 위해서 코드 수정
+- Flask를 사용한 웹 페이지에 기존의 Job Scrapper를 통합, 함수조정
+
+## 4.5 Faster Scrapper
+
+- Fake DB ??
