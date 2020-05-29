@@ -242,4 +242,27 @@ Module #3!
 
 ## 4.5 Faster Scrapper
 
-- Fake DB ??
+- Fake DB
+  - page에 DB처럼 사용할 수 있도록 검색어와 검색 결과를 저장하는 Fake DB 생성
+
+## 4.6 Rendering Jobs!
+
+- css, grid 개념과 사용
+- render_template로 검색 결과 값도 보내기
+- html template에 python 문법인 for문을 적용하기 - flask 기능
+- 결과 page에 스크래핑한 직업들을 보여줌
+
+## 4.7 Export Route
+
+- csv file로 저장하기 위해서 page를 하나 더 생성
+  - export
+- try-except 구문
+  - java에서 try-catch와 같이 실행 문장을 사용하고, 실패시 예외처리를 하는 구문
+  - raise Exception() 으로 사용자가 직접 에러를 발생시킬 수 있다.
+- template로 부터 "word"를 받고 db에서 찾아오는 식으로 처리를 빠르게 할 수 있다.
+  - /report 처리시 검색 내용은 무조건 fakeDB로 들어가므로 가능하다.
+
+## 4.8 File Download
+
+- 이전에 작성한 csv file로 저장하는 코드인 save.py를 따와서 csv file로 저장
+  - flask send_file() 에서 처음 저장 csv만 안되는 에러 발생.......
