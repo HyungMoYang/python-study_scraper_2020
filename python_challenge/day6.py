@@ -8,8 +8,9 @@ os.system("clear")
 """
 Use the 'format_currency' function to format the output of the conversion
 format_currency(AMOUNT, CURRENCY_CODE, locale="ko_KR" (no need to change this one))
-"""
+
 # print(format_currency(5000, "COP", locale="ko_KR"))
+"""
 
 
 def create_list(countries):
@@ -28,9 +29,9 @@ def create_list(countries):
 
 
 def currency_converter(c1_code, c2_code, money):
-    urlurl = f"https://transferwise.com/gb/currency-converter/{c1_code.lower()}-to-{c2_code.lower()}-rate?amount={money}"
+    url = f"https://transferwise.com/gb/currency-converter/{c1_code.lower()}-to-{c2_code.lower()}-rate?amount={money}"
 
-    result = requests.get(urlurl)
+    result = requests.get(url)
     soup = BeautifulSoup(result.text, "html.parser")
     rst = soup.find("input", {"class": "js-TargetAmount"})['value']
 
@@ -65,5 +66,6 @@ while True:
 
 
 rst = currency_converter(c1_code, c2_code, money)
-# print(format_currency(money, c1_code, locale="ko_KR") + " is " + format_currency(rst, c2_code, locale="ko_KR"))
 print(f"{format_currency(money, c1_code, locale='ko_KR')} is {format_currency(rst, c2_code, locale='ko_KR')}")
+
+# print(format_currency(money, c1_code, locale="ko_KR") + " is " + format_currency(rst, c2_code, locale="ko_KR"))
