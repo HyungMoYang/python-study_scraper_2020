@@ -1,1 +1,1 @@
-휴식
+print("challenge 휴일")
