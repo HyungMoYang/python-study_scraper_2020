@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+  <title>TipsyBoy | Popular</title>
+</head>
+
+<body>
+  <header>
+    <h1>TipsyBoy</h1>
+    <div>
+      Order By:
+      <strong>Popular</strong>
+      |
+      <a href="?order_by=new">New</a>
+    </div>
+  </header>
+  <main>
+    {% for popular in db %}
+      <div>
+        <div>
+          <a href = {{popular.get('objectID')}}>
+            <h3>{{popular.get('title')}}</h3>
+          </a>
+          ( <a href="{{popular.get('url')}}" target="_blank">{{popular.get('url')}}</a> )
+        </div>
+        <div>{{popular.get('points')}} points | By : {{popular.get('author')}} | {{popular.get('num_comments')}} comments</div>
+      </div>
+      <hr>
+    {% endfor %}
+  </main>
+</body>
+
+</html>
