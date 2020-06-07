@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Day13&14 Result | TipsyBoy</title>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <h1>Remote Job Scrapper | TipsyBoy</h1>
+    <h3>{{num_of_jobs}} {{search_word}} jobs found.</h3>
+    <a href="/export?search={{search_word}}">Export to CSV</a><br><br>
+    <a href="/">&larr; Go back</a>
+  </header>
+  <main>
+    {% for job in job_list %}
+    <div>
+      <h3>{{job.get('title')}}</h3>
+      <h4>{{job.get('company')}}</h4>
+      <a href={{job.get('link')}} target="_blank">Apply</a>
+      <hr>
+    </div>
+    {% endfor %}
+  </main>
+</body>
+
+</html>
